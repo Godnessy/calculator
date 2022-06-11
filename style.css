@@ -1,0 +1,268 @@
+@import url(//db.onlinewebfonts.com/c/3bae817a3ffed7db86b763dd7d8004b2?family=League+Gothic);
+body {
+  background-color: #2f3945;
+}
+.container {
+  margin: 5% 0% 0% 0%;
+  width: 30%;
+  height: 35em;
+  position: relative;
+  left: 35%;
+  background-color: #c0c0c0;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+  display: grid;
+  border-radius: 5%;
+  grid-template-rows: 0.5fr 4fr 1fr;
+  grid-template-areas:
+    "result"
+    "buttons"
+    "history";
+}
+.buttonContainer {
+  grid-area: buttons;
+  display: grid;
+  margin: 5px;
+  border-radius: 5%;
+  height: auto;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "seven eight nine divide reset"
+    "four five six multiply equals"
+    "one two three minus equals"
+    "btnZero plusMinus dot plus equals"
+    "info info info info info";
+
+  /* padding-bottom: 0px; */
+}
+
+.button {
+  text-align: center;
+  color: orange;
+  position: relative;
+  border-color: #c0c0c0 #7491a5 #7491a5 #c0c0c0;
+  cursor: pointer;
+  font-family: arial, verdana;
+  font-style: normal;
+  resize: none;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 19pt;
+  font-weight: bold;
+  padding-bottom: 2px;
+  background-color: #000000;
+  border: solid 0.5px white;
+}
+.numberBtn {
+  width: inherit;
+}
+.Button:hover {
+  background: linear-gradient(to bottom, #b5b5b5 5%, #f0f0f0 100%);
+  background-color: #b5b5b5;
+}
+.Button:active {
+  box-shadow: 3px 3px 0px -2px #4f7544;
+  background: linear-gradient(to bottom, #fff 0, #e6e6e6 100%);
+  background-color: #c0cfd6;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 7px #2f6627;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+  background: linear-gradient(to bottom, #eaf6fd 0, #a7d9f5 100%);
+}
+
+#resultBox {
+  margin: 0.5em 10px 10px 10px;
+  height: 1.2em;
+  padding: 0.2em;
+  display: flex;
+  border: 1px solid;
+  font-size: 3em;
+  grid-area: result;
+  background-color: black;
+  color: #f68804;
+}
+
+.historyBox {
+  font-size: 2.5em;
+  background-color: white;
+  width: 50%;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#reset {
+  grid-area: reset;
+}
+
+#dot {
+  grid-area: dot;
+}
+
+#plusMinus {
+  grid-area: plusMinus;
+}
+#button1 {
+  grid-area: one;
+}
+
+#button2 {
+  grid-area: two;
+}
+
+#button3 {
+  grid-area: three;
+}
+
+#button4 {
+  grid-area: four;
+}
+
+#button5 {
+  grid-area: five;
+}
+
+#button6 {
+  grid-area: six;
+}
+
+#button7 {
+  grid-area: seven;
+}
+
+#button8 {
+  grid-area: eight;
+}
+
+#button9 {
+  grid-area: nine;
+}
+
+#button0 {
+  grid-area: btnZero;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#historyContainer {
+  width: 30%;
+  height: 10em;
+  position: relative;
+  left: 15%;
+  display: grid;
+  background-color: white;
+  color: #f68804;
+  margin: 0 20% 5% 20%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "result calc";
+  border-radius: 5%;
+  font-size: 1.5em;
+  overflow-y: scroll;
+}
+
+#histResult {
+  grid-area: calc;
+  padding-left: 0.5em;
+  list-style-type: none;
+}
+
+#historyCalc {
+  grid-area: result;
+  position: relative;
+  list-style-type: none;
+}
+
+.data {
+  cursor: pointer;
+  border-bottom: 1px black solid;
+}
+
+.historyBtn {
+  display: flex;
+  justify-content: space-around;
+}
+#deleteHist {
+  background-color: #0ba5ad;
+  position: relative;
+  top: 30%;
+  color: #f68804;
+  /* font-family: LeagueGothic; */
+  height: 50%;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 0px #000000;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.hist {
+  font-family: League + Gothic;
+  grid-area: history;
+  position: relative;
+  top: 30%;
+  font-size: 1.3em;
+  height: 50%;
+  background-color: #0ba5ad;
+  color: #f68804;
+  text-shadow: 1px 1px 0px #000000;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    width: 40%;
+    position: relative;
+    left: 25%;
+  }
+
+  #historyContainer {
+    width: 40%;
+    height: auto;
+    position: relative;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 20%;
+    height: auto;
+    position: relative;
+    left: 50%;
+  }
+
+  #result,
+  #buttonContainer {
+    width: 20%;
+  }
+}
