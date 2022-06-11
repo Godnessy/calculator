@@ -209,6 +209,7 @@ function showResult() {
     showUi(result_ui, result);
     operand = null;
     arg1 = result;
+    arg1 = "";
     arg2 = "";
   }
 }
